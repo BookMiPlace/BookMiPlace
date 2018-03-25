@@ -30,6 +30,19 @@ To push changes to production (remember to send to GitHub first for code review.
 
 Visit app (currently): https://rocky-caverns-17264.herokuapp.com/
 
+## Database set up:
+Make sure you have PostGres installed
+
+Create a postgres user:
+`createuser -s postgres`
+
+Create the development DB:
+`createdb -U postgres book_mi_place_development`
+
+Create the test DB:
+`createdb -U postgres book_mi_place_test`
+
+
 
 (TODO: complete more of this template https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
