@@ -28,7 +28,10 @@
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "npm": "^5.8.0",
-    "popper.js": "^1.12.9"
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "popper.js": "^1.12.9",
+    "sequelize": "^4.37.4"
   },
   "repository": "https://github.com/BookMiPlace/BookMiPlace",
   "private": false
