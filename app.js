@@ -1,6 +1,6 @@
 const { Client } = require('pg');
 const { DATABASE_URL } = process.env;
-const db = require('./models');
+const db = require('./db/models');
 const express = require('express');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
