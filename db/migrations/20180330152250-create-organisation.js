@@ -2,6 +2,12 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Organisations', {
+      id: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+        autoIncrement: true
+      },
       city: {
         type: Sequelize.STRING
       },
@@ -12,12 +18,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       name: {
+        type: Sequelize.STRING,
         allowNull: false,
         validate: {
           len: [2, 200],
           msg: "Must between 2 - 200 characters"
-        },
-        type: Sequelize.STRING
+        }
       },
       phoneNumber: {
         type: Sequelize.STRING
