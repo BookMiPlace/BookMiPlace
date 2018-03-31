@@ -42,6 +42,13 @@ Create the development DB:
 Create the test DB:
 `createdb -U postgres book_mi_place_test`
 
+## Running the tests
+
+`yarn test`
+
+### Break down into end to end tests
+
+//TODO
 
 
 (TODO: complete more of this template https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
