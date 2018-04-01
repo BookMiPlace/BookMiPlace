@@ -7,7 +7,13 @@ module.exports = (sequelize, DataTypes) => {
     phone_number: DataTypes.STRING
   }, {});
   Employee.associate = function(models) {
-    // associations can be defined here
+    Employee.hasMany(models.OrganisationMembership, {
+      foreignKey: 'membershipable_id',
+      constraints: false,
+      scope: {
+        membershipable: 'employee'
+      }
+    });
   };
   return Employee;
 };

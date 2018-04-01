@@ -26,12 +26,8 @@ db.sequelize.sync().then(function() {
      .then((organisation) => {
       org = organisation;
       db.Provider.create( { email: 'alan@bookmi.place' } )
-       .then((provider) => {
-        // console.log('organisation ' + organisation);
-        console.log('org.id ' + org.id); // org.id is present...
-        db.OrganisationMembership.create({ organisation_id: org.id, provider_id: provider.id });
-        // ERROR:
-        // Unhandled rejection SequelizeDatabaseError: null value in column "organisation_id" violates not-null constraint
+       .then((provider) => {        
+        provider.createOrganisationMembership({ organisation_id: org.id });
 
       });
     });

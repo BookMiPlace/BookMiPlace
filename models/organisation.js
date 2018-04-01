@@ -11,7 +11,9 @@ module.exports = (sequelize, DataTypes) => {
     taxNumber: DataTypes.STRING
   }, {});
   Organisation.associate = function(models) {
-    // associations can be defined here
+    Organisation.hasMany(models.OrganisationMembership, {
+      foreignKey: 'organisation_id'
+    });
   };
   return Organisation;
 };

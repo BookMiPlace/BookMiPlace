@@ -7,7 +7,13 @@ module.exports = (sequelize, DataTypes) => {
     phone_number: DataTypes.STRING
   }, {});
   Provider.associate = function(models) {
-    // associations can be defined here
+    Provider.hasMany(models.OrganisationMembership, {
+      foreignKey: 'membershipable_id',
+      constraints: false,
+      scope: {
+        membershipable: 'provider'
+      }
+    });
   };
   return Provider;
 };

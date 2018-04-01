@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     membershipable_id: DataTypes.INTEGER
   }, {});
   OrganisationMembership.associate = function(models) {
-    OrganisationMembership.hasOne(models.Organisation, { foreignKey: 'organisation_id' });
+    OrganisationMembership.belongsTo(models.Organisation, { foreignKey: 'organisation_id' });
     OrganisationMembership.belongsTo(models.Employee, {
       foreignKey: 'membershipable_id',
       constraints: false,

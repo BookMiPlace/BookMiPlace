@@ -17,6 +17,7 @@ module.exports = {
          }
       },
       membershipable: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       membershipable_id: {
