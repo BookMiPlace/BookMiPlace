@@ -21,10 +21,33 @@ db.sequelize.sync().then(function() {
   app.listen(port, function() {
     console.log('Listening on port ' + port);
 
-    db.Provider.create( { email: 'alan@bookmiplace.com' } )
-    .then((provider) => {
-      console.log('provider ' + provider);
-    });
+    // let prov, org;
+    // db.Provider.create( { email: 'alan@bookmiplace.com' } )
+    // .then((provider) => {
+    //   console.log('provider ' + provider);
+    //   prov = provider;
+    // })
+    // .then(() => {
+    //   db.Organisation.create( { name: 'My Org' } )
+    //   .then((organisation) => {
+    //     console.log('organisation ' + organisation);
+    //     org = organisation;
+    //   })
+    //   .then(() => {
+    //     console.log('org.id ' + org.id);
+    //     console.log('prov.id ' + prov.id);
+
+    //     db.OrganisationProvider.create( 
+    //       { 
+    //         organisation_id: org.id, 
+    //         provider_id: prov.id
+    //       }
+    //     )
+    //     .then((organisation_provider) => {
+    //       console.log('organisation_provider ' + organisation_provider);
+    //     });
+    //   });
+    // });
 
   });
 });
