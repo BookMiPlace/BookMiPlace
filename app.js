@@ -20,5 +20,11 @@ app.use(require('./controllers'));
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
     console.log('Listening on port ' + port);
+
+    db.Provider.create( { email: 'alan@bookmiplace.com' } )
+    .then((provider) => {
+      console.log('provider ' + provider);
+    });
+
   });
 });
