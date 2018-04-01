@@ -45,9 +45,10 @@ db.sequelize.sync().then(function() {
     //     )
     //     .then((organisation_provider) => {
     //       console.log('organisation_provider ' + organisation_provider);
+
+    //       prov.createTrip({ name: 'My trip' });
     //     });
     //   });
     // });
-
   });
 });
