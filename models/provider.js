@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     phoneNumber: DataTypes.STRING
   }, {});
   Provider.associate = function(models) {
-    // associations can be defined here
+    Provider.hasMany(models.Trip, { as: 'Trips', foreignKey: 'provider_id' })
   };
   return Provider;
 };
